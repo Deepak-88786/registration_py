@@ -1,0 +1,29 @@
+# registration_form.py
+
+def get_user_input(prompt):
+    """Function to get user input with a prompt"""
+    return input(prompt)
+
+def register_user():
+    """Function to register a new user"""
+    print("Welcome to the Registration Form\n")
+    # Get user input for each field
+    first_name = get_user_input("Enter your first name: ")
+    last_name = get_user_input("Enter your last name: ")
+    email = get_user_input("Enter your email address: ")
+    password = get_user_input("Create a password: ")
+    # Store user information in a dictionary
+    user_info = {
+        "First Name": first_name,
+        "Last Name": last_name,
+        "Email": email,
+        "Password": password
+    }
+    print("\nRegistration Successful!\n")
+    # Display the registered user information
+    print("Registered User Information:")
+    for key, value in user_info.items():
+        print(f"{key}: {value}")
+
+if __name__ == "__main__":
+    register_user()
